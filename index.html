@@ -43,7 +43,7 @@ p,li{color:#e6dff7} ul{padding-left:22px} a{color:#ffcc33}
 <li><strong>Eine zufällige Kennung der App</strong> (keine Hardware-Kennung), gespeichert auf deinem Handy, damit du nach einer kurzen Verbindungsunterbrechung wieder ins selbe Spiel kommst</li>
 <li><strong>Nur beim Online-Spiel und beim Melden:</strong> eine anonyme Anmelde-Kennung bei Google Firebase, ein Nachweis, dass die echte App verwendet wird (App Check), und – technisch bedingt – Verbindungsdaten wie die IP-Adresse</li>
 </ul>
-<p>Die App verarbeitet keine besonderen Kategorien von Daten. Es findet keine Gesichtserkennung und keine automatisierte Entscheidungsfindung statt.</p>
+<p>Die App prüft direkt auf dem Handy, ob auf einem Foto überhaupt ein Gesicht zu sehen ist; Fotos ohne Gesicht werden nicht verschickt oder nicht verteilt (Schutz vor unpassenden Bildern). Dabei wird niemand identifiziert, es werden keine biometrischen Merkmale gespeichert oder übertragen. Die App verarbeitet keine besonderen Kategorien von Daten; eine automatisierte Entscheidung mit rechtlicher Wirkung findet nicht statt.</p>
 <h3>Berechtigungen am Handy</h3>
 <ul>
 <li><strong>Kamera:</strong> nur während des Spiels für die Selfies.</li>
@@ -72,13 +72,13 @@ p,li{color:#e6dff7} ul{padding-left:22px} a{color:#ffcc33}
 <ul>
 <li>Fotos der Mitspieler: werden nach dem Empfang durch den Gastgeber sofort vom Server gelöscht.</li>
 <li>An alle verteilte Spieldaten: werden bei jeder neuen Runde gelöscht, das ganze Spiel beim Spielende („Zum Start“).</li>
-<li>Stürzt die App des Gastgebers ab, wird das alte Spiel beim nächsten Online-Spiel dieses Handys gelöscht.</li>
+<li>Reißt die Verbindung des Gastgebers ab (auch bei einem Absturz der App), löscht der Server die Fotos von selbst. Die restlichen Angaben des Spiels (Name des Gastgebers, Zeitpunkt) werden beim nächsten Online-Spiel dieses Handys gelöscht, sonst nach 24 Stunden, sobald wieder jemand ein Online-Spiel startet.</li>
 <li>Anonyme Anmelde-Kennung: wird nach jedem Online-Spiel gelöscht.</li>
 <li><strong>Meldungen</strong> (gemeldetes Foto, Spielername, Grund, Zeitpunkt, anonyme Kennung der meldenden Person): werden nach der Prüfung gelöscht, spätestens nach 30 Tagen.</li>
 <li>Daten auf deinem Handy: bis du die App löschst.</li>
 </ul>
 <h3>Sicherheit</h3>
-<p>Verschlüsselte Übertragung; Zugriff nur über die echte App (Firebase App Check); Mitlesen nur für Spieler, die der Gastgeber zugelassen hat; entfernte Spieler werden gesperrt.</p>
+<p>Verschlüsselte Übertragung; Fotofilter (nur Fotos mit Gesicht); Zugriff nur über die echte App (Firebase App Check); Mitlesen nur für Spieler, die der Gastgeber zugelassen hat; entfernte Spieler werden gesperrt.</p>
 <h3>Kinder und Jugendliche</h3>
 <p>Die App ist für Personen ab 14 Jahren gedacht. Unter 14 Jahren nur mit Zustimmung der Eltern.</p>
 <h3>Deine Rechte</h3>
